@@ -193,7 +193,8 @@ def chat_with_asha(request: QueryRequest, user: dict = Depends(verify_token)):
                     else:
                         link = job.get("redirect_url")
 
-                job_md = f"""**{title}** at _{company}_
+                job_md = f"""{title}
+🏢 Company: {company}
 📍 Location: {location}
 💼 Work Mode: {work_mode}
 🛠️ Skills: {skills}
