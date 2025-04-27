@@ -54,18 +54,7 @@ Create a `.env` file in the `asha-chatbot/` folder and add:
 
 ```
 REACT_APP_ASHA_TOKEN=your_jwt_token_here
-```
-
-### Deployment
-
-To deploy this to GitHub:
-
-```bash
-git init
-git add .
-git commit -m "Initial Commit"
-git remote add origin https://github.com/yourusername/asha-ai-chatbot.git
-git push -u origin main
+REACT_APP_BACKEND_URL=your_backend_url        #most likely localhost:8000/chat
 ```
 
 ## Folder Structure
