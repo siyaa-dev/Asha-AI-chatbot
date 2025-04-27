@@ -23,6 +23,8 @@ import re
 # Load environment variables
 load_dotenv()
 auth_secret_key = os.getenv("Secret_Key")
+redis_host = os.getenv("redis_host")
+redis_pass = os.getenv("redis_pass")
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -51,7 +53,7 @@ client = OpenAI(base_url="https://models.inference.ai.azure.com",
 # Check if OpenAI API key is set
 
 # Redis for context memory storage
-redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+redis_client = redis.Redis(host=redis_host, port=19984, decode_responses=True, username="default", password=redis_pass)
 
 # JWT Auth setup
 SECRET_KEY = auth_secret_key
