@@ -79,7 +79,7 @@ class UserCredentials(BaseModel):
 
 # JWT helpers
 def create_token(data: dict):
-    data["exp"] = datetime.now(timezone.utc) + timedelta(hours=6)
+    data["exp"] = datetime.now(timezone.utc) + timedelta(weeks=12)
     return jwt.encode(data, SECRET_KEY, algorithm=ALGORITHM )
 
 def verify_token(token: str = Depends(oauth2_scheme)):
