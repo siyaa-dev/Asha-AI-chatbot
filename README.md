@@ -4,7 +4,8 @@ Asha AI is an intelligent chatbot designed to assist users with information abou
 
 ## Hosted Project
 
-This project is [hosted](https://asha-ai-chatbot.netlify.app/)
+This project is [hosted](https://asha-ai-chatbot.netlify.app/).
+
 First response from the bot takes around 1 min because the backend is hosted on Render's free tier so it starts the server after a request is received. But after that you will get responses within 5-10 seconds.
 
 ## Features
