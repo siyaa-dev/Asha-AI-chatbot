@@ -463,9 +463,12 @@ def export_data(user: dict = Depends(verify_token)):
     return HTMLResponse(content=output.read(), media_type="text/csv")
 
 @app.get("/health")
-def health_check():
-    return {"status": "running"}
+def get_ping():
+    return {"status": "ok"}
 
+@app.head("/health")
+def head_ping():
+    return Response(status_code=200)
 
 
 import difflib
