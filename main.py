@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request, Depends
+from fastapi import FastAPI, HTTPException, Request, Depends, Response
 from job_title_dataset import keywords as job_title_keywords
 from pydantic import BaseModel
 from openai import OpenAI
